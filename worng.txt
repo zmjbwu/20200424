@@ -1,0 +1,30 @@
+方法
+在使用git ?源代??行push到gitHub?可能会出?，信息如下
+
+如何解决failed to push some refs to git
+
+此?很多人会??下面的命令把当前分支代?上?到master分支上。
+
+$ git push -u origin master
+但依然没能解决??
+
+如何解决failed to push some refs to git
+
+出???的主要原因是github中的README.md文件不在本地代?目?中
+
+如何解决failed to push some refs to git
+
+可以通?如下命令?行代?合并【注：pull=fetch+merge]
+
+git pull --rebase origin master
+
+如何解决failed to push some refs to git
+
+?行上面代?后可以看到本地代??中多了README.md文件
+
+
+
+作者：落木兮兮
+?接：https://www.jianshu.com/p/835e0a48c825
+来源：??
+著作??作者所有。商?????系作者?得授?，非商????注明出?。
