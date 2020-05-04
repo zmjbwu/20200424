@@ -123,8 +123,9 @@ class TextField(Field):
     def __init__(self, name=None, default=None):
         super().__init__(name, 'text', False, default)
 
-class ModelMetaclass(type):
-     '''
+
+     
+    '''
      https://www.cnblogs.com/phpper/p/10627838.html
     # metaclass是创建类，所以必须从`type`类型派生：
     当我们传入关键字参数metaclass时，魔术就生效了，它指示Python解释器在创建MyFriend时，要通过FriendMetaclass.__new__()来创建，
@@ -137,8 +138,9 @@ class ModelMetaclass(type):
     如果想先创建类，就先定义metaclass，再创建class，再创建实例
     metaclass允许你创建类和修改类，所以可以把类看成是metaclass创建出来的实例
     创建metaclass，类名结尾一般为Metaclass,Metaclass是类的模板，所以需继承type
-    '''
-
+    
+    ''' 
+class ModelMetaclass(type):
     def __new__(cls, name, bases, attrs):
         if name=='Model':
             return type.__new__(cls, name, bases, attrs)
