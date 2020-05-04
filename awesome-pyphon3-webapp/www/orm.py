@@ -77,9 +77,18 @@ def create_args_string(num):
     for n in range(num):
         L.append('?')
     return ', '.join(L)
-
+    # 写一个ORM映射框架,一行sql对应着对象的每个字段
+    # 定义一个字段基类
 class Field(object):
+    '''
+    #类继承了object对象，拥有了好多可操作对象，这些都是类中的高级特性。
+    ['__class__', '__delattr__', '__dict__', '__doc__', '__format__', '__getattribute__', 
+    '__hash__', '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', 
+    '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'name']
 
+
+    '''
+   
     def __init__(self, name, column_type, primary_key, default):
         self.name = name
         self.column_type = column_type
@@ -88,7 +97,7 @@ class Field(object):
 
     def __str__(self):
         return '<%s, %s:%s>' % (self.__class__.__name__, self.column_type, self.name)
-
+    # 定义一个数据类型表,以下示例
 class StringField(Field):
 
     def __init__(self, name=None, primary_key=False, default=None, ddl='varchar(100)'):
@@ -115,13 +124,27 @@ class TextField(Field):
         super().__init__(name, 'text', False, default)
 
 class ModelMetaclass(type):
+     '''
+     https://www.cnblogs.com/phpper/p/10627838.html
+    # metaclass是创建类，所以必须从`type`类型派生：
+    当我们传入关键字参数metaclass时，魔术就生效了，它指示Python解释器在创建MyFriend时，要通过FriendMetaclass.__new__()来创建，
+     # 类对象,类名,继承类的父类集合,方法集合
+   
+    type()函数既可以返回一个数的类型。还可以运行时动态创建类
+    除了使用type()创建类时，我们还可以使用metaclass控制类的创建行为：
+    metaclass直译为元类,也称为python的魔术代码
+    当我们定义好类之后，可以通过metaclass创建类的实例，先定义类，再定义metaclass，再创建实例
+    如果想先创建类，就先定义metaclass，再创建class，再创建实例
+    metaclass允许你创建类和修改类，所以可以把类看成是metaclass创建出来的实例
+    创建metaclass，类名结尾一般为Metaclass,Metaclass是类的模板，所以需继承type
+    '''
 
     def __new__(cls, name, bases, attrs):
         if name=='Model':
             return type.__new__(cls, name, bases, attrs)
         tableName = attrs.get('__table__', None) or name
         logging.info('found model: %s (table: %s)' % (name, tableName))
-        mappings = dict()
+        mappings = dict()  # 空字典
         fields = []
         primaryKey = None
         for k, v in attrs.items():
@@ -134,7 +157,8 @@ class ModelMetaclass(type):
                         raise Exception('Duplicate primary key for field: %s' % k)
                     primaryKey = k
                 else:
-                    fields.append(k)
+                    fields.append(k)            #合并field值
+
         if not primaryKey:
             raise Exception('Primary key not found.')
         for k in mappings.keys():
