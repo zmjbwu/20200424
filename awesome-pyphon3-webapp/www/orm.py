@@ -12,7 +12,23 @@ def log(sql, args=()):
 
 async def create_pool(loop, **kw):
     logging.info('create database connection pool...')
-    global __pool
+    global __pool 
+    '''
+    #Python中定义函数时，若想在函数内部对函数外的变量进行操作，就需要在函数内部声明其为global。
+
+    _xx 单下划线开头
+
+    Python中没有真正的私有属性或方法,可以在你想声明为私有的方法和属性前加上单下划线,
+    以提示该属性和方法不应在外部调用.如果真的调用了也不会出错,但不符合规范.
+
+    "__xx__"前后各双下划线
+    当你看到"__this__"的时，就知道不要调用它。为什么？因为它的意思是它是用于Python调用的，如下：
+    “__xx__”经常是操作符或本地函数调用的magic methods。在上面的例子中，提供了一种重写类的操作符的功能。
+    在特殊的情况下，它只是python调用的hook。例如，__init__()函数是当对象被创建初始化时调用的;__new__()是用来创建实例。
+    
+    __"两个下划线开始的方法时，这意味着这个方法不能被重写，它只允许在该类的内部中使用
+    '''
+
     __pool = await aiomysql.create_pool(
         host=kw.get('host', 'localhost'),
         port=kw.get('port', 3306),
