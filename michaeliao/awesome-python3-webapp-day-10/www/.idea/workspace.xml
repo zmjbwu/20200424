@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e2963c85-f6e7-4c11-8d09-e80aaf1c392f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/markdown2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/templates/signin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config_default.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config_override.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coroweb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markdown2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/uikit.addons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/uikit.almost-flat.addons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/uikit.gradient.addons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/uikit.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/uikit.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/uikit.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/awesome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/sha1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/sticky.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/uikit.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/__base__.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blogs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/apis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/apis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/config_default.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/config_default.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/coroweb.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/coroweb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/orm.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/orm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www/test.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1bVwkVH7utgl0EzhjcJ8KdFj5VE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../awesome-pyphon3-webapp/www" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e2963c85-f6e7-4c11-8d09-e80aaf1c392f" name="Default Changelist" comment="" />
+      <created>1588730711709</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588730711709</updated>
+      <workItem from="1588730715500" duration="262000" />
+      <workItem from="1588731163543" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1588731176265">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1588731176265" />
+  </component>
+</project>

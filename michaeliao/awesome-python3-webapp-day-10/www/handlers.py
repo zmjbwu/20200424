@@ -3,9 +3,11 @@
 
 __author__ = 'Michael Liao'
 
+' url handlers '
+
 import re, time, json, logging, hashlib, base64, asyncio
 
-import markdown2,asyncio
+import markdown2
 
 from aiohttp import web
 
@@ -14,8 +16,6 @@ from apis import APIValueError, APIResourceNotFoundError
 
 from models import User, Comment, Blog, next_id
 from config import configs
-
-COOKIE_NAME = 'awesession'
 
 COOKIE_NAME = 'awesession'
 _COOKIE_KEY = configs.session.secret
@@ -30,6 +30,7 @@ def user2cookie(user, max_age):
     L = [user.id, expires, hashlib.sha1(s.encode('utf-8')).hexdigest()]
     return '-'.join(L)
 
+@asyncio.coroutine
 def cookie2user(cookie_str):
     '''
     Parse cookie and load user if cookie is valid.
@@ -118,20 +119,20 @@ _RE_EMAIL = re.compile(r'^[a-z0-9\.\-\_]+\@[a-z0-9\-\_]+(\.[a-z0-9\-\_]+){1,4}$'
 _RE_SHA1 = re.compile(r'^[0-9a-f]{40}$')
 
 @post('/api/users')
-async def api_register_user(*, email, name, passwd):
+def api_register_user(*, email, name, passwd):
     if not name or not name.strip():
         raise APIValueError('name')
     if not email or not _RE_EMAIL.match(email):
         raise APIValueError('email')
     if not passwd or not _RE_SHA1.match(passwd):
-       await APIValueError('passwd')
-    users = await  User.findAll('email=?', [email])
+        raise APIValueError('passwd')
+    users = yield from User.findAll('email=?', [email])
     if len(users) > 0:
         raise APIError('register:failed', 'email', 'Email is already in use.')
     uid = next_id()
     sha1_passwd = '%s:%s' % (uid, passwd)
     user = User(id=uid, name=name.strip(), email=email, passwd=hashlib.sha1(sha1_passwd.encode('utf-8')).hexdigest(), image='http://www.gravatar.com/avatar/%s?d=mm&s=120' % hashlib.md5(email.encode('utf-8')).hexdigest())
-    await  user.save()
+    yield from user.save()
     # make session cookie:
     r = web.Response()
     r.set_cookie(COOKIE_NAME, user2cookie(user, 86400), max_age=86400, httponly=True)
