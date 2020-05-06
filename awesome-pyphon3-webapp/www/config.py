@@ -32,12 +32,6 @@ def merge(defaults, override):
     for k, v in defaults.items():
         if k in override:
             if isinstance(v, dict):
-                '''
-                isinstance() 函数来判断一个对象是否是一个已知的类型，类似 type()
-                如果要判断两个类型是否相同推荐使用 isinstance()。
-                如果对象的类型与参数二的类型（classinfo）相同则返回 True，否则返回 False。。
-
-                '''
                 r[k] = merge(v, override[k])
             else:
                 r[k] = override[k]
